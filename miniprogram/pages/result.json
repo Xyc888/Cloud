@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "painter": "/components/painter/painter"
+  },
+  "window": {
+    "navigationBarTitleText": "最新排行榜"
+  },
+
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

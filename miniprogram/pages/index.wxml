@@ -1,0 +1,10 @@
+<view class="cover1">
+	<view class="cover1-bg">
+		<image class="logo" src="/images/colored3.png" mode="widthFix"></image>
+		<image class="cover1-tit" src="/images/new-cover1.png" mode="widthFix"></image>
+		<image class="cover1-pic" src="/images/cover-pic-1.png" mode="widthFix"></image>
+		<button wx:if="{{canIUse}}" class="start-btn" bindtap="startTest">开始答题</button>
+    <!-- <button wx:else class="start-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>  -->
+    <button wx:if="{{canIUse}}" class="start-btn auth" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权 ≥ω≤ 登录</button> 
+	</view>
+</view>

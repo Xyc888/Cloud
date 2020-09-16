@@ -1,0 +1,14 @@
+<!-- 题目 -->
+<view class="cover2">
+	<view class="card-bg card-bg-1">
+		<view class="card" wx:if="curQuestionData">
+			<view class="question"><text>问题{{curIndex+1}}：{{curQuestionData.value}}</text></view>
+			<view class="choice">
+        	<button wx:for="{{curQuestionData.questionList}}" data-id="{{index}}" class="{{curOption == index && curClass}}" bindtap="checkOption">{{item.option}} {{item.value}}</button>
+			</view>
+			<view class="tips" wx:if="{{nextlock}}" bindtap="next" class="{{isTrue?' tips tips1':'tips tips2'}}">
+				回答{{isTrue ? "正确" : "错误"}}。{{tips}}
+			</view>
+		</view>
+  </view>
+</view>

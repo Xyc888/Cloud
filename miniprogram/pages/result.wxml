@@ -1,0 +1,30 @@
+<view class="cover1">
+<image class="img" mode="widthFix" src="{{avatarUrl}}"></image>       
+<!-- src="{{avatarUrl}}" -->
+
+<view class="grade">此轮答题对了:{{count}}题 / 累计得分:{{grade}}分</view>
+<button class="start-agin" bindtap="startTest">再答一轮</button>
+<view class="rank">最新排行榜</view>
+  <view class="content">
+    <view class="item-box">
+      <!-- 所有项 -->
+      <view class="items">
+        <!-- 每一项 -->
+        <view wx:for="{{list}}" wx:key="{{index}}" class="item">
+          <view class='inner txt'>
+            <!-- 排名 -->
+            <i>{{index+1}}</i>
+            <!-- 头像 -->
+            <image class="item-icon" mode="widthFix" src="{{item.avatarUrl}}"></image>
+            <!-- 姓名 -->
+            <i> {{item.nickName}}</i>
+            <!-- 分数 -->
+            <span class="item-data">
+              <i class="rankpace"> {{item.grade}}</i>
+            </span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
